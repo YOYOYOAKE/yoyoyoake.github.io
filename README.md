@@ -3,7 +3,7 @@
   <img src="https://cdn.jsdelivr.net/gh/YOYOYOAKE/image-hosting//avatar-round.png" width="200px" alt="avatar">
 </p>
 <p align="center">
-  由 <a herf="https://v2.vuepress.vuejs.org/">VuePress</a> 和 
-  <a herf="https://theme-plume.vuejs.press/">vuepress-theme-plume</a>
+  由 <img alt="Static Badge" src="https://img.shields.io/badge/VuePress-2.0.0--rc.18-3eaf7c">
+  和 <img alt="Static Badge" src="https://img.shields.io/badge/vuepress--theme--plume-1.0.0--rc.119-5086a1">
   驱动
 </p>
