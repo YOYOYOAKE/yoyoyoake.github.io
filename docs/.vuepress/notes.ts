@@ -33,7 +33,8 @@ const mysql = defineNoteConfig({
       text: '笔记',
       items: [
         'Part-01.md',
-        'Part-02.md'
+        'Part-02.md',
+        'Part-03.md',
       ]
     },
   ]
