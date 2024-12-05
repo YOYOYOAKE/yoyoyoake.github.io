@@ -7,7 +7,12 @@ export default defineUserConfig({
   base: '/',
   lang: 'zh-CN',
   title: 'YOYOArticle',
-  description: 'YOAKE所写',
+  head: [
+    ['link', {
+      rel: 'icon',
+      href: 'https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/avatar-round.png'
+    }]
+  ],
 
   bundler: viteBundler(),
 
@@ -15,7 +20,10 @@ export default defineUserConfig({
     notes,
 
     // 添加您的部署域名
-    // hostname: 'https://your_site_url',
+    hostname: 'https://yoyoyoake.github.io',
+    footer: {
+      message: "Copyright ©️ 2024 YOAKE | Powered by VuePress & vuepress-theme-plume",
+    },
 
     plugins: {
       search: false,
@@ -25,7 +33,7 @@ export default defineUserConfig({
        */
       shiki: {
         // 强烈建议预设代码块高亮语言，插件默认加载所有语言会产生不必要的时间开销
-        languages: ['shell', 'bash', 'typescript', 'javascript', 'c','sql'],
+        languages: ['shell', 'bash', 'typescript', 'javascript', 'c', 'sql'],
       },
 
       /**
