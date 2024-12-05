@@ -19,7 +19,7 @@ permalink: /graphics/LC05/
 
 如下图中蓝色像素的坐标可以被表示为$(2,1)$，其中心为$(2.5,1.5$).
 
-![1732239883885](image/Lecture-05/1732239883885.png)
+![LC05-01](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc05/01.png)
 
 ## 2 光栅化
 
@@ -50,7 +50,7 @@ $$
 
 以下图为例将三角形覆盖到屏幕上，直观上可以认为：落在三角形内部的像素将其涂色，而三角形外部的像素不作处理. 那么三角形边缘处的像素应该如何判断？
 
-![1732243357420](image/Lecture-05/1732243357420.png)
+![LC05-02](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc05/02.png)
 
 只需要判断像素的中心是否在三角形内即可：
 
@@ -65,10 +65,11 @@ for(int x = 0; x < xmax; ++x)
 
 ```
 
-![1732243432092](image/Lecture-05/1732243432092.png)
+![LC05-03](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc05/03.png)
 
-![1732244693262](image/Lecture-05/1732244693262.png)
+![LC05-04](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc05/04.png)
+
 
 为了避免遍历所有屏幕像素，提出**包围盒**的概念：只判断包围盒内部的像素，而包围盒外部的像素直接判断为在三角形外.
 
-![1732244500400](image/Lecture-05/1732244500400.png)
+![LC05-05](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc05/05.png)

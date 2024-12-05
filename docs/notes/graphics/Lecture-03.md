@@ -31,7 +31,7 @@ x \\ y
 \end{pmatrix}
 $$
 
-![1731918690454](image/Lecture-03/1731918690454.png)
+![LC03-01](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc03/01.png)
 
 $x$坐标和$y$坐标可以不均匀地缩放，如下图变换的矩阵形式可以写为：
 
@@ -50,7 +50,7 @@ x \\ y
 \end{pmatrix}
 $$
 
-![1731919097201](image/Lecture-03/1731919097201.png)
+![LC03-02](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc03/02.png)
 
 矩阵$\begin{pmatrix} s_x & 0 \\\ 0 & s_y \end{pmatrix}$称为**缩放矩阵**，他是一个对角阵.
 
@@ -73,9 +73,9 @@ x \\ y
 \end{pmatrix}
 $$
 
-对称可以看做系数为负数的缩放.
+对称可以看做系数为-1的缩放.
 
-![1731919402643](image/Lecture-03/1731919402643.png)
+![LC03-03](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc03/03.png)
 
 ### 1.3 切变
 
@@ -94,7 +94,7 @@ x \\ y
 \end{pmatrix}
 $$
 
-![1731919599314](image/Lecture-03/1731919599314.png)
+![LC03-04](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc03/04.png)
 
 ### 1.4 旋转
 
@@ -117,7 +117,7 @@ x \\ y
 \end{pmatrix}
 $$
 
-![1731919675443](image/Lecture-03/1731919675443.png)
+![LC03-05](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc03/05.png)
 
 ### 1.5 线性变换
 
@@ -156,7 +156,7 @@ x' = x + t_x \\
 y' = y + t_y
 $$
 
-![1731920284920](image/Lecture-03/1731920284920.png)
+![LC03-06](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc03/06.png)
 
 随后发现，平移变换的表达不能写成线性变换的矩阵形式，即平移变换不是原坐标的线性组合. 只能写成：
 
@@ -286,7 +286,7 @@ $$
 M^{-1} \begin{pmatrix} x' \\ y' \end{pmatrix}
 $$
 
-![1732102203036](image/Lecture-03/1732102203036.png)
+![LC03-07](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc03/07.png)
 
 ## 3 变换的组合
 
@@ -297,13 +297,13 @@ $$
 T \cdot R \cdot \begin{pmatrix} x \\ y \end{pmatrix}
 $$
 
-![1732102538611](image/Lecture-03/1732102538611.png)
+![LC03-08](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc03/08.png)
 
 规定：若对图形做多个变换，则应该按照变换的顺序依次左乘原坐标，顺序不能颠倒. 因为矩阵乘法不满足交换律.
 
 例如，$\begin{pmatrix} x' \\ y' \end{pmatrix} = R \cdot T \cdot \begin{pmatrix} x \\ y \end{pmatrix}$的结果为：
 
-![1732102810667](image/Lecture-03/1732102810667.png)
+![LC03-09](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc03/09.png)
 
 ## 4 变换的分解
 
@@ -315,7 +315,7 @@ $$
 2. 绕原点旋转指定角度；
 3. 将指定点平移回原位置.
 
-![1732103120410](image/Lecture-03/1732103120410.png)
+![LC03-10](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc03/10.png)
 
 ## 5 三维变换
 

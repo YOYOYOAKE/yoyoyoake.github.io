@@ -33,7 +33,7 @@ permalink: /graphics/LC02/
 
 在平面直角坐标系中，若向量$\boldsymbol{a} = (x_a,y_a)^T,\boldsymbol{b}=(x_b,y_b)^T$，则$\boldsymbol{a}+\boldsymbol{b}=(x_a+x_b,y_a+y_b)^T$.
 
-![1731589807474](image/Lecture-02/1731589807474.png)
+![LC02-01](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc02/01.png)
 
 ### 1.3 向量的数量积（点乘）
 
@@ -93,11 +93,11 @@ $$
 
 - 可用于将一个向量分解为两个相互垂直的向量.
 
-![1731591842847](image/Lecture-02/1731591842847.png)
+![LC02-02](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc02/02.png)
 
 - 判断两个向量的大致方向.
 
-![1731591937414](image/Lecture-02/1731591937414.png)
+![LC02-03](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc02/03.png)
 
 ### 1.5 向量的向量积（叉乘）
 
@@ -159,11 +159,11 @@ $$
 
 在计算机图形学中，向量积可用来判断“左和右”. 假设下图中的向量$\boldsymbol{a}$和$\boldsymbol{b}$在 $xOy$平面上，则根据右手定则，$\boldsymbol{a} \times \boldsymbol{b}$ 指向$z$轴正方向，那么我们认为$\boldsymbol{b}$在$\boldsymbol{a}$的左侧；同理，$\boldsymbol{b} \times \boldsymbol{a}$指向$z$轴负方向，那么我们认为$\boldsymbol{a}$在$\boldsymbol{b}$的右侧.
 
-![1731634570345](image/Lecture-02/1731634570345.png)
+![LC02-04](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc02/04.png)
 
 由上述规则可以进一步判断“内与外”. 依次做$\vec{AP}\times\vec{AB}, \vec{BP}\times\vec{BC}, \vec{CP}\times\vec{CA}$，若以上向量积指向的方向相同，则$P$点在三角形$ABC$的内侧，否则在外侧.
 
-![1731634886171](image/Lecture-02/1731634886171.png)
+![LC02-05](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc02/05.png)
 
 ## 2 矩阵
 

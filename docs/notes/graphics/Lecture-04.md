@@ -18,7 +18,7 @@ permalink: /graphics/LC04/
 - 视线方向 $\hat{ \boldsymbol{g}} $
 - 向上方向 $\hat{ \boldsymbol{t} }$
 
-![1732187765523](image/Lecture-04/1732187765523.png)
+![LC04-01](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc04/01.png)
 
 一个很明显的现象是：当相机和物体一起运动（或者说二者没有相对运动）时，物体的投影是不变的。因此在图形学中，总是让相机保持不动，而被投影的物体围绕相机运动.
 
@@ -55,7 +55,7 @@ $$
 3. 将$\hat{ \boldsymbol{t}}$旋转到$y$轴；
 4. 将$\hat{ \boldsymbol{g}} \times \hat{ \boldsymbol{t}}$旋转到$x$轴.
 
-![1732188477196](image/Lecture-04/1732188477196.png)
+![LC04-02](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc04/02.png)
 
 然而将任意向量旋转至坐标轴上并不容易，因此考虑其逆过程，即将坐标轴旋转至指定方向：
 
@@ -111,7 +111,7 @@ $$
 
 正交投影可以视为焦点在无限远处的透视投影.
 
-![1732190303416](image/Lecture-04/1732190303416.png)
+![LC04-03](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc04/03.png)
 
 ### 2.1 正交投影
 
@@ -121,7 +121,7 @@ $$
 2. 令$z=0$；
 3. 通过平移和缩放变换将第2步的结果置于$[-1,1]^2$中.
 
-![1732190418788](image/Lecture-04/1732190418788.png)
+![LC04-04](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc04/04.png)
 
 通常使用下面的方法，将一个任意立方体$[l,r] \times [b,t] \times [f,n]$变换到标准立方体$[-1,1]^3$：
 
@@ -141,19 +141,19 @@ M_{ortho} =
    \end{pmatrix}
 $$
 
-![1732190727662](image/Lecture-04/1732190727662.png)
+![LC04-05](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc04/05.png)
 
 ### 2.2 透视投影
 
 透视投影的模型可以看做是一个四棱台. 那么只要将这个四棱台变换为一个立方体，就可以按照正交投影的方法再将其变换到标准立方体.
 
-![1732191835635](image/Lecture-04/1732191835635.png)
+![LC04-06](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc04/06.png)
 
 #### 2.2.1 透视投影矩阵
 
 沿着$x$轴方向从正向负观察模型，可以看到下图所示的内容.
 
-![1732192262646](image/Lecture-04/1732192262646.png)
+![LC04-07](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc04/07.png)
 
 由相似三角形原理不难得到：
 
@@ -269,7 +269,7 @@ $$
 
 视场角是相机与近平面上下两条边的中心的连线形成的角，它可以用来定义相机的广角或者长焦.
 
-![1732238982787](image/Lecture-04/1732238982787.png)
+![LC04-08](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc04/08.png)
 
 借助视场角和长宽比的概念，可以从中得到模型的$l,r,b,t$四个参数：
 
@@ -281,4 +281,4 @@ $$
 aspect = \frac{r}{t}
 $$
 
-![1732239322800](image/Lecture-04/1732239322800.png)
+![LC04-09](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc04/09.png)
