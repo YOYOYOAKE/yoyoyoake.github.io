@@ -18,7 +18,8 @@ const graphics = defineNoteConfig({
     {
       text: '课后作业',
       items: [
-        'Assignment-0.md'
+        'Assignment-0.md',
+        'Assignment-1.md',
       ]
     },
   ]
