@@ -38,6 +38,7 @@ const mysql = defineNoteConfig({
         'Part-04.md',
         'Part-05.md',
         'Part-06.md',
+        'Part-07.md',
       ]
     },
   ]
