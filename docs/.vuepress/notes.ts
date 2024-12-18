@@ -13,6 +13,7 @@ const graphics = defineNoteConfig({
         'Lecture-03.md',
         'Lecture-04.md',
         'Lecture-05.md',
+        'Lecture-06.md',
       ]
     },
     {
