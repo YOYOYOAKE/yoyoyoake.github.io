@@ -14,6 +14,7 @@ const graphics = defineNoteConfig({
         'Lecture-04.md',
         'Lecture-05.md',
         'Lecture-06.md',
+        'Lecture-07.md',
       ]
     },
     {
