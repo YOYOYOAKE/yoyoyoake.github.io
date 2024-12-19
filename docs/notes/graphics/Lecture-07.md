@@ -12,7 +12,7 @@ permalink: /graphics/LC07/
 
 如下图所示，一个光源照亮了几个茶杯，可以看到茶杯的颜色主要分为颜色变化剧烈的**高光部分**、颜色变化平缓的**漫反射部分**、没有直接光照但是仍被照亮的**间接光照部分**.
 
-![1734589515550](image/Lecture-07/1734589515550.png)
+![1734589515550](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc07/1734589515550.png)
 
 ### 1.2 着色的局部性
 
@@ -20,7 +20,7 @@ permalink: /graphics/LC07/
 
 在此之前我们需要规定观测方向$\boldsymbol{v}$、光线方向$\boldsymbol{l}$、物体的法线方向$\boldsymbol{n}$和物体的表面参数（如颜色等）.
 
-![1734589831374](image/Lecture-07/1734589831374.png)
+![1734589831374](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc07/1734589831374.png)
 
 由于着色的局部性，我们对几个物体进行着色后，可以看到其明暗变化，而不能看到阴影. 因为着色过程不考虑光线的遮挡.
 
@@ -28,7 +28,7 @@ permalink: /graphics/LC07/
 
 不同于镜面反射，漫反射的光射会向各个方向.
 
-![1734590414550](image/Lecture-07/1734590414550.png)
+![1734590414550](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc07/1734590414550.png)
 
 那么对于一个漫反射的物体，它在相机中的亮度应该如何计算呢？
 
@@ -42,13 +42,13 @@ $$
 A = A_{unit} \cos\theta = \boldsymbol{l} \cdot \boldsymbol{n}
 $$
 
-![1734595941301](image/Lecture-07/1734595941301.png)
+![1734595941301](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc07/1734595941301.png)
 
 我们再考虑光源散发出的能量. 假设光源均匀散发能量，根据能量守恒定律，距离光源越远，单位面积内接收到的能量就越少.
 
 假设距离光源单位距离的单位面积内接收到的能量为$I$，那么简单计算就可以知道，距离光源$r$的单位面积内接收到的能量为$I/r^2$.
 
-![1734596345950](image/Lecture-07/1734596345950.png)
+![1734596345950](https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/notes/graphics/lc07/1734596345950.png)
 
 综合上述内容，得到漫反射物体上一点处反射出的能量为：
 
