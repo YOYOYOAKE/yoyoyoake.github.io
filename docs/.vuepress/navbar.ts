@@ -10,6 +10,7 @@ export const navbar = defineNavbarConfig([
     items: [
       { text: '计算机图形学', link: '/graphics/README.md' },
       { text: 'MySQL', link: '/mysql/README.md' },
+      { text: 'TypeScript', link: '/ts/README.md' },
     ]
   },
 ])
