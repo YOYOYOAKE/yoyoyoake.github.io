@@ -23,7 +23,7 @@ JavaScript在ES6中引入了类的概念，而TypeScript作为JavaScript的超�
 ```typescript
 class Person{
   name: string
-  age: string
+  age: number
 
   constructor(name: string, age: number){
     this.name = name
@@ -54,11 +54,11 @@ class Student extends Person {
     this.sid = sid
   }
 
-  greet(){
+  override greet(){
     console.log(`你好，我叫${this.name}，是个学生，今年${this.age}岁了`)
   }
 
-  override study(){
+  study(){
     console.log(`${this.name}正在学习中……`)
   }
 }
@@ -86,7 +86,7 @@ student1.study() // 输出：Ajohn正在学习中……
 ```typescript
 class Person{
   public name: string
-  public age: string
+  public age: number
 
   constructor(name: string, age: number){
     this.name = name
@@ -254,7 +254,7 @@ const add: AddInterface = (x, y) => x+y
 ```typescript
 interface PersonInterface {
   name: string,
-  age: string
+  age: number
 }
 
 interface StudentInterface extends PersonInterface {
@@ -264,7 +264,7 @@ interface StudentInterface extends PersonInterface {
 
 ### 2.5 接口的合并
 
-在TypeScript中，可以重复定义接口。重复定义的接口将合并二者的属性，如果有重复的属性则后者覆盖前者。
+在TypeScript中，可以重复定义接口。重复定义的接口将合并二者的属性。
 
 ```typescript
 interface PersonInterface {
@@ -274,7 +274,6 @@ interface PersonInterface {
 }
 
 interface PersonInterface {
-  gender: boolean,
   readonly id: string
 }
 ```
@@ -284,7 +283,7 @@ interface PersonInterface {
 interface PersonInterface{
   name: string,
   age: number,
-  gender: boolean,
+  gender: string,
   readonly id: string
 }
 ```
@@ -319,7 +318,7 @@ const printData = <T>(data: T): void => {
 
 ```typescript
 printData<number>(721) // 输出：721
-printData<string>('Ajohn的最强的') // 输出："Ajohn是最强的"
+printData<string>('Ajohn是最强的') // 输出："Ajohn是最强的"
 ```
 
 泛型具有高度灵活性。一个泛型函数中可以有多个泛型。函数的返回值也支持泛型。
