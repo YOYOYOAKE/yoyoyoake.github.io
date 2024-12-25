@@ -2,6 +2,8 @@
 title: 深入探索TypeScript：不仅仅是JavaScript+Type
 createTime: 2024/12/20 09:42:18
 permalink: /article/9nbewde3/
+tags:
+  - JavaScript / TypeScript
 ---
 
 > 在现代前端开发中，TypeScript已经成为了不可忽视的技术之一。作为JavaScript的超集，TypeScript不仅增强了类型系统，还提供了更好的开发工具支持。
