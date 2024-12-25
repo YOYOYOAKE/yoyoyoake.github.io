@@ -6,7 +6,7 @@ config:
     type: hero
     full: true
     background: tint-plate
-    tintPlate: 160,190,210
+    tintPlate: 225,225,225
     hero:
       name: YOYOArticle
       text: Birds are born with no shackles.
