@@ -2,7 +2,7 @@
 title: 知识就是培根 - Notes Collection
 createTime: 2024/11/20 20:10:56
 permalink: /article/mlq5nrzh/
-sticky: true
+sticky: 2
 ---
 
 <LinkCard title="Notes of GAMES101 现代计算机图形学入门" href="/graphics/" />
