@@ -22,3 +22,4 @@ AJohn一直催我写周记，那他自己为什么不写？
 <LinkCard title="2025W1 再启程" href="/article/iq6ft9iu/" />
 <LinkCard title="2025W2 假设" href="/article/cfyl2b89/" />
 <LinkCard title="2025W3 猜想" href="/article/cpaezpwo/" />
+<LinkCard title="2025W4-6 过程" href="/article/qtqrfb5l/" />
