@@ -48,22 +48,8 @@ const mysql = defineNoteConfig({
   ]
 })
 
-const typescript = defineNoteConfig({
-  dir: 'typescript',
-  link: '/ts/',
-  sidebar: [
-    'README.md',
-    {
-      text: '笔记',
-      items: [
-        'Part-01.md',
-      ]
-    }
-  ]
-})
-
 export const notes = defineNotesConfig({
   dir: 'notes',
   link: '/',
-  notes: [graphics, mysql, typescript],
+  notes: [graphics, mysql],
 })
