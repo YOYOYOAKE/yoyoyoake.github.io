@@ -1,5 +1,5 @@
 ---
-title: 行迹 - YOYORecord
+title: 行迹2025 - YOYORecord
 createTime: 2025/01/01 17:58:28
 permalink: /article/xaklzim6/
 sticky: 1
@@ -23,3 +23,4 @@ AJohn一直催我写周记，那他自己为什么不写？
 <LinkCard title="2025W2 假设" href="/article/cfyl2b89/" />
 <LinkCard title="2025W3 猜想" href="/article/cpaezpwo/" />
 <LinkCard title="2025W4-6 过程" href="/article/qtqrfb5l/" />
+<LinkCard title="2025W7 " href="/article/5hpo98s5/" />
