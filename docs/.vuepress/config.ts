@@ -20,9 +20,9 @@ export default defineUserConfig({
     notes,
 
     // 添加您的部署域名
-    hostname: 'https://yoyoyoake.github.io',
+    hostname: 'https://www.yoake.cc',
     footer: {
-      message: "Copyright ©️ 2024 YOAKE | Powered by VuePress & vuepress-theme-plume",
+      message: "Copyright ©️ 2025 YOAKE | Powered by VuePress & vuepress-theme-plume",
     },
 
     plugins: {
