@@ -4,6 +4,7 @@ import { defineClientConfig } from 'vuepress/client'
 
 // import './theme/styles/custom.css'
 import './styles/custom.css'
+import './styles/image.css'
 
 export default defineClientConfig({
   enhance({ app }) {
