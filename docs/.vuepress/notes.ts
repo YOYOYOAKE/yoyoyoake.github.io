@@ -1,4 +1,5 @@
 import { defineNoteConfig, defineNotesConfig } from 'vuepress-theme-plume'
+import record from './notesConfig/record'
 
 const graphics = defineNoteConfig({
   dir: 'graphics',
@@ -51,5 +52,5 @@ const mysql = defineNoteConfig({
 export const notes = defineNotesConfig({
   dir: 'notes',
   link: '/',
-  notes: [graphics, mysql],
+  notes: [graphics, mysql, record],
 })
