@@ -9,7 +9,7 @@ config:
     tintPlate: 225,225,225
     hero:
       name: YOYOArticle
-      text: Birds are born with no shackles.
+      text: 𝑩𝒊𝒓𝒅𝒔 𝒂𝒓𝒆 𝒃𝒐𝒓𝒏 𝒘𝒊𝒕𝒉 𝒏𝒐 𝒔𝒉𝒂𝒌𝒍𝒆𝒔.
       actions:
         -
           theme: brand
