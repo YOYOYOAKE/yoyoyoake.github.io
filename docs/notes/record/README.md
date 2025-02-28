@@ -13,7 +13,7 @@ AJohn一直催我写周记，那他自己为什么不写？
 
 ::: card title="Archive Two：求索" icon="fluent-color:book-open-24"
 <CardGrid>
-  <LinkCard title="2025W9 ???" href="/record/2025w9/" />
+  <LinkCard title="2025W9 雪沫乳花浮午盏" href="/record/2025w9/" />
 </CardGrid>
 :::
 
