@@ -22,6 +22,11 @@ export const navbar = defineNavbarConfig([
     icon: 'material-symbols:linked-services'
   },
   {
+    text: '备忘录',
+    link: '/memo/',
+    icon: 'material-symbols:sticky-note-2-rounded'
+  },
+  {
     text: '知识库',
     items: [
       { text: '计算机图形学', link: '/graphics/README.md' },
