@@ -10,7 +10,7 @@ export default defineUserConfig({
   head: [
     ['link', {
       rel: 'icon',
-      href: 'https://cdn.jsdelivr.net/gh/YOYOYOAKE/YOYOPics/avatar-round.png'
+      href: 'https://oss.yoake.cc/yoyopics/avatar-round.webp'
     }]
   ],
 
