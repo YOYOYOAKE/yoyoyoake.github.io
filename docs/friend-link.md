@@ -25,5 +25,10 @@ config:
           src: https://oss.yoake.cc/yoyopics/friends/avatar-zephyr-round.webp
         details: 不要温和地走进那个良夜。
         link: https://moiads.xyz/
-createTime: 2025/02/28 20:24:19
+      -
+        title: LiKEKFA
+        icon:
+          src: https://oss.yoake.cc/like/avatar-like.webp
+        details: 黎电池可可可爆炸。
+        link: https://likekfa.github.io/
 ---
