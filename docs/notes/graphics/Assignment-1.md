@@ -52,7 +52,7 @@ permalink: /graphics/AS1/
     \begin{pmatrix}
         1 & 0 & 0 & -\frac{r+l}{2} \\
         0 & 1 & 0 & -\frac{t+b}{2} \\
-        0 & 1 & 1 & -\frac{n+f}{2} \\
+        0 & 0 & 1 & -\frac{n+f}{2} \\
         0 & 0 & 0 & 1 
     \end{pmatrix}
     \begin{pmatrix}
@@ -80,47 +80,78 @@ permalink: /graphics/AS1/
   Eigen::Matrix4f get_projection_matrix(float eye_fov, float aspect_ratio,
                                       float zNear, float zFar)
   {
-      // 1. 透视投影转化为正交投影
-      float n = zNear;
-      float f = zFar;
+    // 1. 透视投影转化为正交投影
+    float n = zNear;
+    float f = zFar;
 
-      Eigen::Matrix4f Matrix_persp2ortho;
-      Matrix_persp2ortho << n, 0, 0, 0,
-          0, n, 0, 0,
-          0, 0, n + f, -n * f,
-          0, 0, 1, 0;
+    Eigen::Matrix4f Matrix_persp2ortho;
+    Matrix_persp2ortho << n, 0, 0, 0,
+        0, n, 0, 0,
+        0, 0, n + f, -(n * f),
+        0, 0, 1, 0;
 
-      // 2. 视锥角和宽高比转化为计算参数
-      float fov = (eye_fov / 2.0) * MY_PI / 180.0;
-      float t = n * tan(fov * 2);
-      float b = -t;
-      float r = aspect_ratio * t;
-      float l = -r;
+    // 2. 视锥角和宽高比转化为计算参数
+    float fov = (eye_fov / 2.0f) * MY_PI / 180.0f;
+    float t = std::abs(n) * tan(fov);
+    float b = -t;
+    float r = aspect_ratio * t;
+    float l = -r;
 
-      // 2. 正交投影转化到正则立方体
-      Eigen::Matrix4f trans, scale;
-      trans << 1, 0, 0, -(r + l) / 2,
-          0, 1, 0, -(t + b) / 2,
-          0, 0, 1, -(n + f) / 2,
-          0, 0, 0, 1;
+    // 2. 正交投影转化到正则立方体
+    Eigen::Matrix4f trans, scale;
+    trans << 1, 0, 0, -(r + l) / 2,
+        0, 1, 0, -(t + b) / 2,
+        0, 0, 1, -(n + f) / 2,
+        0, 0, 0, 1;
 
-      scale << 2 / (r - l), 0, 0, 0,
-          0, 2 / (t - b), 0, 0,
-          0, 0, 2 / (n - f), 0,
-          0, 0, 0, 1;
+    scale << 2 / (r - l), 0, 0, 0,
+        0, 2 / (t - b), 0, 0,
+        0, 0, 2 / (n - f), 0,
+        0, 0, 0, 1;
 
-      return scale * trans * Matrix_persp2ortho;
+    // 3. 计算透视投影矩阵
+    return scale * trans * Matrix_persp2ortho;
   }
   ```
 
-
 3. 编译运行
+
   ::: center
   ![as1-result](https://oss.yoake.cc/yoyopics/graphics/assignments/as1-result.webp)
   :::
 
   此时你会发现这个三角形和理论中不同，它的方向恰好相反（按照我们的推导，它应该指向上方）。
 
-  这是因为我们在推导时使用的是右手坐标系，而OpenCV使用的是左手系。你可以试着用左手系重新推导一下这个三角形，会发现这个是正确的。
+  这是因为我们在推导时使用的是右手坐标系，而OpenCV使用的是左手系。当你固定任意两个轴的方向时，左手系和右手系的第三个轴的方向恰好相反，二者互为镜像
+  
+  你可以试着用左手系重新推导一下这个三角形，会发现屏幕上的这个倒置三角形是正确的。
+
+4. 修正坐标系
+
+  那么该如何修改代码，使得三角形正过来呢？
+
+  我们在推导过程中使用的坐标系是笛卡尔坐标系，它以屏幕右下角为原点，向右为$x$轴，向上为$y$轴，穿过屏幕向外为$z$轴。
+
+  而`OpenCV`屏幕坐标系以屏幕右上角为原点，向右为$x$轴，向下为$y$轴，穿过屏幕向外为$z$轴。
+
+  因此我们只需要在投影变换时，逆转$y$轴方向即可。
+
+  ```c++
+  // 3. 逆转y轴方向
+  Eigen::Matrix4f reverse_y;
+  reverse_y << 1, 0, 0, 0,
+      0, -1, 0, 0,
+      0, 0, 1, 0,
+      0, 0, 0, 1;
+
+  // 4. 计算透视投影矩阵
+  return reverse_y * scale * trans * Matrix_persp2ortho;
+  ```
+
+  运行得到
+
+  ::: center
+  ![as1-result-2](https://oss.yoake.cc/yoyopics/graphics/assignments/as1-result-2.webp)
+  :::
 
 ::::
